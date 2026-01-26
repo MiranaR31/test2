@@ -15,8 +15,8 @@ define(['managerAPI',
     API.addSettings('skip',true);
 	API.addGlobal({
 		raceiat:{},
-		ImmigrantLabels:Immigrés,
-		Native:Natifs,
+		ImmigrantLabels:'Immigrés',
+		Native:'Natifs',
 		posWords : API.shuffle([
 			'Respectueux','Capable','Préparé','Volontaire',
 			'Intelligent','Compétent','Studieux','Précis'
