@@ -13,7 +13,8 @@ define(['questAPI'], function(Quest){
         autoFocus:true, 
         progressBar:  'Page <%= pagesMeta.number %> out of 3'
     });
-	
+
+
     /**
 	* Question prototypes
 	*/
@@ -42,20 +43,14 @@ define(['questAPI'], function(Quest){
         autoSubmit:false
     });
 	
-    API.addQuestionsSet('therm',{
+    API.addQuestionsSet('likert5',{
         inherit: 'basicSelect',
         answers: [
-            {text:'10 - Extremely warm', value:10},
-            {text:'9 - Very warm', value:9},
-            {text:'8 - Moderately warm', value:8},
-            {text:'7 - Somewhat warm', value:7},
-            {text:'6 - Slightly warm', value:6},
-            {text:'5 - Neither warm nor cold', value:5},
-            {text:'4 - Slightly cold', value:4},
-            {text:'3 - Somewhat cold', value:3},
-            {text:'2 - Moderately cold', value:2},
-            {text:'1 - Very cold', value:1},
-            {text:'0 - Extremely cold', value:0}
+            {text:'Tout à fait d\'accord', value:5},
+			{text:'Plutôt d\'accord', value:4},
+			{text:'Ni d\'accord ni pas d\'accord', value:3},
+			{text:'Plutôt pas d\'accord', value:2},
+			{text:'Pas du tout d\'accord', value:1}
         ]
     });
 
@@ -63,32 +58,50 @@ define(['questAPI'], function(Quest){
     /**
 	*Specific questions
 	*/	
-    API.addQuestionsSet('attributes7',{
-        inherit : 'basicSelect',
-        name: 'attributes7',
-        stem: 'Which statement best describes you?',
-        answers: [
-            {text:'I strongly prefer <%= global.whiteLabels %> to <%= global.blackLabels %>.',value:7},
-            {text:'I moderately prefer <%= global.whiteLabels %> to <%= global.blackLabels %>.',value:6},
-            {text:'I slightly prefer <%= global.whiteLabels %> to <%= global.blackLabels %>.',value:5},
-            {text:'I like <%= global.whiteLabels %> and <%= global.blackLabels %> equally.',value:4},
-            {text:'I slightly prefer <%= global.blackLabels %> to <%= global.whiteLabels %>.',value:3},
-            {text:'I moderately prefer <%= global.blackLabels %> to <%= global.whiteLabels %>.',value:2},
-            {text:'I strongly prefer <%= global.blackLabels %> to <%= global.whiteLabels %>.',value:1}
-        ]
-    });
-	
-    API.addQuestionsSet('thermBlack',{
-        inherit : 'therm',
-        name: 'Tblack_0to10',
-        stem: 'How warm or cold do you feel towards <b><%= global.blackLabels %></b>?'
-    });
 
-    API.addQuestionsSet('thermWhite',{
-        inherit : 'therm',
-        name: 'Twhite_0to10',
-        stem: 'How warm or cold do you feel towards <b><%= global.whiteLabels %></b>?'
-    });
+	API.addQuestionsSet('explicit1',{
+		inherit : 'basicSelect',
+		name : 'diff_culture',
+		stem : 'Il est mieux pour une classe qu\'il y ait une diversité de coutumes, de cultures et d\'origines ?',
+		
+	});
+
+	API.addQuestionsSet('explicit2',{
+		inherit : 'basicSelect',
+		name : 'facilite_etu',
+		stem : 'Pensez-vous, qu\'en moyenne, les étudiants de certaines origines ont plus de facilité dans certaines matières ?',
+	});
+
+	API.addQuestionsSet('explicit3',{
+		inherit : 'basicSelect',
+		name : 'difficulte_afr',
+		stem : 'Pensez-vous, qu\'en moyenne, les étudiants d\'origine maghrébine ou africaine ont plus de difficultés dans certaines matières, au-delà de la potentielle barrière de la langue ?',
+	});
+
+	API.addQuestionsSet('prof1',{
+		inherit : 'basicSelect',
+		name : 'prof_1',
+		stem : 'Dans votre enseignement, vous laissez les étudiants chercher les réponses eux-mêmes, au risque qu\'ils se trompent, avant de leur expliquer et leur donner les solutions.',
+	});
+
+	API.addQuestionsSet('prof2',{
+		inherit : 'basicSelect',
+		name : 'prof_2',
+		stem : 'Dans votre enseignement, vous invitez les étudiants à participer, à avoir un regard critique et à poser des questions.',
+	});
+
+	API.addQuestionsSet('prof3',{
+		inherit : 'basicSelect',
+		name : 'prof_3',
+		stem : 'Si un étudiant travaille suffisamment, il peut devenir le meilleur de sa classe (peu importe ses capacités innées).',
+	});
+
+	API.addQuestionsSet('prof4',{
+		inherit : 'basicSelect',
+		name : 'prof_4',
+		stem : 'Les enseignants doivent garder une certaine distance et incarner l\'autorité dans leur relation avec les étudiants.',
+	});
+
 
     API.addSequence([
         {
