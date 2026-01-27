@@ -394,10 +394,11 @@ define(['questAPI'], function(Quest){
 				{inherit:'genre'},
 				{inherit:'age'},
 				{inherit:'pays_naissance'}
-				},
+				]
+		},
 		{//explicit
 			mixer:'random',
-			wrapper:'true',
+			wrapper:true,
 			data:[
 				{inherit:'basicPage', questions: {inherit:'explicit1'}},
 				{inherit:'basicPage', questions: {inherit:'explicit2'}},
@@ -407,7 +408,7 @@ define(['questAPI'], function(Quest){
 		//prof
 		{
 			mixer:'random',
-			wrapper:'true',
+			wrapper:true,
 			data:[		
 		        {inherit:'basicPage', questions: {inherit:'prof1'}},
 				{inherit:'basicPage', questions: {inherit:'prof2'}},
@@ -418,7 +419,7 @@ define(['questAPI'], function(Quest){
 		{inherit:'basicPage',questions:{inherit:'contrat'}},
 		{inherit:'basicPage',condition:'<%=current.questions.contrat == 3 %>',
 		 questions:{inherit:'vacataire'}},
-		{inherit:'basicPAge',questions:{inherit:'satisfaction'}}
+		{inherit:'basicPage',questions:{inherit:'satisfaction'}}
     ]);
 
 
