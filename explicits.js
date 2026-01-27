@@ -11,7 +11,7 @@ define(['questAPI'], function(Quest){
         decline: true,
         declineText: isTouch ? 'Refuser' : 'Refuser de répondre', 
         autoFocus:true, 
-        progressBar:  'Page <%= pagesMeta.number %> out of 3'
+        progressBar:  'Page <%= pagesMeta.number %> out of 7'
     });
 
 
@@ -60,43 +60,43 @@ define(['questAPI'], function(Quest){
 	*/	
 
 	API.addQuestionsSet('explicit1',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'diff_culture',
 		stem : 'Il est mieux pour une classe qu\'il y ait une diversité de coutumes, de cultures et d\'origines ?',
 	});
 
 	API.addQuestionsSet('explicit2',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'facilite_etu',
 		stem : 'Pensez-vous, qu\'en moyenne, les étudiants de certaines origines ont plus de facilité dans certaines matières ?',
 	});
 
 	API.addQuestionsSet('explicit3',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'difficulte_afr',
 		stem : 'Pensez-vous, qu\'en moyenne, les étudiants d\'origine maghrébine ou africaine ont plus de difficultés dans certaines matières, au-delà de la potentielle barrière de la langue ?',
 	});
 
 	API.addQuestionsSet('prof1',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'prof_1',
 		stem : 'Dans votre enseignement, vous laissez les étudiants chercher les réponses eux-mêmes, au risque qu\'ils se trompent, avant de leur expliquer et leur donner les solutions.',
 	});
 
 	API.addQuestionsSet('prof2',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'prof_2',
 		stem : 'Dans votre enseignement, vous invitez les étudiants à participer, à avoir un regard critique et à poser des questions.',
 	});
 
 	API.addQuestionsSet('prof3',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'prof_3',
 		stem : 'Si un étudiant travaille suffisamment, il peut devenir le meilleur de sa classe (peu importe ses capacités innées).',
 	});
 
 	API.addQuestionsSet('prof4',{
-		inherit : 'basicSelect',
+		inherit : 'likert5',
 		name : 'prof_4',
 		stem : 'Les enseignants doivent garder une certaine distance et incarner l\'autorité dans leur relation avec les étudiants.',
 	});
