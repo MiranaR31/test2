@@ -342,6 +342,7 @@ define(['questAPI'], function(Quest){
 	        {text:'38', value:38},
 	        {text:'39', value:39},
 	        {text:'40', value:40},
+			{text:'Plus de 40 ans',value:41}
 			]
 	});
 
