@@ -72,7 +72,7 @@ define(['questAPI'], function(Quest){
 			{text : 'Homme'},
 			{text : 'Femme'},
 			{text : 'Autre'},
-			{text : 'Ne souhaite pas répondre}
+			{text : 'Ne souhaite pas répondre'}
 				]
 	});
 
@@ -351,7 +351,7 @@ define(['questAPI'], function(Quest){
 		inherit : 'basicSelect',
 		name : 'contrat',
 		stem : 'Quel type de contrat/statut avez-vous?', 
-		ansewers : [
+		answers : [
 			{text : 'Maître de conférence', value:1},
 			{text : 'Professeur des universités', value : 2},
 			{text : 'Vacataire', value : 3},
@@ -364,7 +364,7 @@ define(['questAPI'], function(Quest){
 		inherit : 'basicSelect',
 		name : 'vacataire',
 		stem : 'Si vous êtes vacataires, enseignez-vous cette matière ailleurs qu\'à l\'Université ?',
-		ansewers : [
+		answers : [
 			{text : 'Oui', value : 1},
 			{text : 'Non', value : 2}
 			]
