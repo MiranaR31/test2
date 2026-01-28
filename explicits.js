@@ -29,8 +29,8 @@ define(['questAPI'], function(Quest){
         autoSubmit:'false',
         numericValues:'true',
         help: '<%= pagesMeta.number < 3 %>',
-        helpText: 'Astuce : Pour répondre rapidement, double-cliquez sur votre réponse pour la soumettre.'
-    });
+        helpText: 'Astuce : Vous pouvez double-cliquer sur votre réponse pour passer à la question suivante'<br><br\>
+			'Attention, vous ne pourrez pas revenir sur votre réponse précédente.'
 
     API.addQuestionsSet('basicSelect',{ //Sélection unique 
         inherit :'basicQ',
