@@ -390,9 +390,7 @@ define(['questAPI'], function(Quest){
 		//demographie
 		{inherit:'basicPage',questions:{inherit:'genre'}},
 		{inherit:'basicPage',questions:{inherit:'age'}},
-		{inherit:'basicPage',questions:{inherit:'pays_naissance'}}
-		]
-	
+		{inherit:'basicPage',questions:{inherit:'pays_naissance'}},
 		{//explicit
 			mixer:'random',
 			wrapper:true,
@@ -400,8 +398,7 @@ define(['questAPI'], function(Quest){
 				{inherit:'basicPage', questions: {inherit:'explicit1'}},
 				{inherit:'basicPage', questions: {inherit:'explicit2'}},
 				{inherit:'basicPage', questions: {inherit:'explicit3'}}
-				]
-		},
+				]},
 		//prof
 		{
 			mixer:'random',
